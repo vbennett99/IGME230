@@ -1,0 +1,115 @@
+/*HTML Elements*/
+
+body {
+    background-color: black;
+    font-family: "Courier", monospace;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+footer {
+    text-align: center;   
+}
+
+a{
+    text-decoration: none;   
+    color: black; 
+    transition: 0.5s;
+}
+
+a:hover {
+    color: white;
+    background-color: darkred;
+}
+
+/*ID'd Items*/
+#wrapper {
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 3px solid darkred;
+}
+
+
+/*Title*/
+#titleWrapper {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title {
+    font-size: 50px;
+    text-align: center;
+    margin: 15px;
+}
+
+#subtitle {
+    font-size: 30px;
+    margin: 5px;
+    text-align: center;
+    color: darkred;
+}
+
+/*Navigation*/
+#navigation {
+    text-align: center;
+    border-bottom: 5px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbar li{
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+/*Main Body - Index*/
+#mainIndex {
+    overflow: auto;   
+}
+
+#mainIndex p {
+    float: left;
+    width: 60%;   
+}
+
+#mothmanPicture {
+    width: 265px;   
+    height: 256px;
+    margin: 20px;
+    margin-right: 10%;
+    float: right;
+}
+
+/*Main Body - Documentation*/
+
+#mainDoc {
+    overflow: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+
+#mainProposal {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
