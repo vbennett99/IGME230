@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id="banner" src="images/botwCBBanner.png" alt="A blue sign reading /'Breath of the Wild Cookbook/'">
+            <div id="navigation">
+                <ul id="navbar">
+                    <li>Home</li>
+                    <li id="center">Sources</li>
+                    <li>Info</li>
+                </ul>
+            </div>
+        </header>
+        
+        
+        <div class="widgets">
+            <p>Search a recipe, ingredient, etc:</p>
+	       <input id="searchterm" type="text" size="20" maxlength="20" autofocus value="food" />
+        </div>
+
+        <div class="widgets">
+	       Max Results: 
+            <select id="limit">
+		      <option value="x" selected="">Unlimited</option>
+		      <option value="2">2</option>
+		      <option value="5">5</option>
+		      <option value="10">10</option>
+		      <option value="25">25</option>
+            </select>
+        </div>
+
+        <div class="widgets">
+	       <button type="button" id="search" class="green">Find your recipe!</button>
+        </div>
+        
+        <script src="main.js"></script>
+
+        <hr>
+        
+        <h2>Results</h2>
+        <div id="content">
+	       <p>Searching...</p>
+        </div>
+
+    </div>
+    <script></script>
+</body>
+</html>

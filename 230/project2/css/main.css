@@ -1,0 +1,79 @@
+/* ----- HTML ELEMENTS ----- */
+
+body {
+    background-color: #0D4F8B;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: aliceblue;
+}
+
+header {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+hr {
+    border: 1.5px solid black;   
+    border-radius: 2px;
+    width: 60%;
+}
+
+h2 {
+    font-size: 30px;   
+    text-align: center;
+}
+
+/* ----- ID SELECTORS ----- */
+#banner {
+    border-radius: 2px 50px;
+    width: 75%;   
+}
+
+/* Nav Bar*/
+#navbar {
+    list-style: none;
+    font-size: 175%;
+}
+
+#navbar li {
+    display: inline;   
+    padding: 1% 2%;
+    background-color: #2187d8;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+#navbar li:hover {
+    background-color: #dffeff;  
+    color: #0D4F8B;
+}
+
+#center {
+    margin-left: 30px;   
+    margin-right: 30px;
+}
+
+#content {
+	text-align: center;
+	border: 1px solid aliceblue;
+	margin: auto;
+	width: 60%;
+	border-radius: 15px;
+}
+
+/* ----- CLASS SELECTORS ----- */
+
+.widgets{
+            border-style: solid;
+		    border-width : 1px;
+            border-radius: 15px;
+            padding: 0.5% 0%;
+    
+            text-align: center;
+    
+			margin-top: 1em;
+			margin-bottom:1em;
+            margin-left: 25%;    
+            margin-right: 25%;
+		}
