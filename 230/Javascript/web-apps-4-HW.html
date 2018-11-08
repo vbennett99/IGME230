@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-4-HW</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Bands</h2>
+
+<ol id="bandsList">
+	
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+	
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+	
+</ol>
+
+<script>
+"use strict";
+let bands = ["Modern Baseball", "AJJ", "Joyce Manor", "PUP", "Citizen"];
+let foods = ["Pizza", "Sushi", "Burritos", "Eggrolls", "Rice"]; // add some foods
+
+// Optional - can you figure out how to pull both the key AND the value
+// from the `links` object literal?
+let links = {
+		"RIT": "http://www.rit.edu",
+		"RWAG" : "https://www.facebook.com/RWAGclub",
+		"New Media Club" : "http://newmediaclub.cias.rit.edu"
+	}
+
+//Part 2
+let lists = document.querySelectorAll("ol");
+
+for(let i = 0; i < lists.length; i++)
+{
+    if(i == 0) //if the first/band list
+    {
+        for(let k = 0; k < bands.length; k++)
+        {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = bands[k];
+            lists[i].appendChild(listItem);
+        }
+    }
+    
+    if(i == 1) //if the second/food list
+    {
+        for(let k = 0; k < foods.length; k++)
+        {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = foods[k];
+            lists[i].appendChild(listItem);
+        }
+    }
+    
+    
+    if(i == 2) //if the third/links list
+    {
+        for(let k = 0; k < links.length; k++)
+        {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = links[k];
+            lists[i].appendChild(listItem);
+        }
+    }
+    
+}
+
+</script>
+</body>
+</html>

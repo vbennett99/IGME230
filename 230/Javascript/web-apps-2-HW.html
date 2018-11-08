@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Hello-4</title>
+   <script>
+     "use strict";
+     // 1) Common JS Objects
+     let colors = ["red", "green", "blue"]; // Array literal
+     let person = {name:"Fred", age:20};   // Object literal
+     let month = new Date().getMonth(); 
+     let age = Math.round(20.999);
+     let age2 = Math.floor(20.999);
+
+    //HW 1.) Use a method of the Array object to append another color to the end of the colors array
+        colors.push("yellow");
+    //HW 2.) Print out the last element in the colors array, without hard-coding the index value
+       console.log(colors[colors.length - 1]);
+    //HW 3.) Loop through the colors array using a for loop and print out each value to the console.
+       var i;
+       for(i = 0; i < colors.length; i++){
+            console.log(colors[i]);
+       }
+    //HW 4.) Add a new property named school to the person object and give it a value of "RIT". Then print this value to the console.
+       person["school"] = "RIT";
+       console.log(person.school);
+       
+    //HW 5.) Print out the number of seconds that have passed since 1970 - use the Date object.
+       console.log((Date.now() / 1000));
+       
+    //HW 6.) Print out the value of pi
+       console.log(Math.PI);
+       
+    //HW 7.) Print out the absolute value of -999
+       console.log(Math.abs(-999));
+    
+    //HW 8.) Print out an "all caps" version of the string "Hello" - use a method of the String object.
+       var greeting = "hello";
+       console.log(greeting.toUpperCase(greeting));
+       
+     // 2) Treat "primitives" like objects
+     let sum = 99.980809809;             // Number
+     let name = "Fred";                  // String
+     let isLoggedIn = false;             // Boolean
+     let userName = undefined;
+     let data = null;
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>DOM-3</title>
+	<style>
+		body{border:1px solid gray;}
+		p b{transform: rotate(20deg)}
+	</style>
+</head>
+<body>
+<h1>My Page</h1>
+<h2>Info</h2>
+<h2>Pictures</h2>
+<h2>More Info</h2>
+<p>Blah <b>Blah</b> Blah</p>
+<p>Blah <b>Blah</b> Blah</p>
+<p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+<footer>Copyright &copy; <b>20XX</b></footer>
+<script>
+	"use strict";
+    
+    //Parts 1 - 4
+    let headingOne = document.querySelector("h1");
+    
+    headingOne.innerHTML = "My UFO Page";
+    
+    let headingTwos = document.querySelectorAll("h2");
+    
+    for(let i = 0; i < headingTwos.length; i++){
+        let h2 = headingTwos[i];
+        if(i == 0)
+        {
+            h2.innerHTML = "My UFO Info";
+        }
+        if(i == 1)
+        {
+            h2.innerHTML = "My UFO Pictures";
+        }
+        if(i == 2)
+        {
+            h2.innerHTML = "";   
+        }
+    }
+    
+    //Part 5
+    document.body.style.fontFamily = "sans-serif";
+    document.body.style.color = "#A0522D";
+    
+    //Part 6
+    let paragraph = document.querySelector("p");
+    var linkString = " http://www.nuforc.org";
+    paragraph.innerHTML = "REPORT YOUR UFO SIGHTINGS HERE: " + linkString.link("http://www.nuforc.org");
+    
+    paragraph.style.color = "green";
+    paragraph.style.fontWeight = "bold";
+    paragraph.style.fontSize = "2em";
+    paragraph.style.textTransform = "uppercase";
+    paragraph.style.textShadow = "3px 2px #A44";
+    
+    //Part 7
+    let paragraphs = document.querySelectorAll("p");
+    for(let i = 0; i < paragraphs.length; i++)
+    {
+        if(i == 1)
+        {
+            paragraphs[i].innerHTML = "";   
+        }
+        if(i == 2)
+        {
+            paragraphs[i].innerHTML = "<img src=\"https://cdn.images.express.co.uk/img/dynamic/80/590x/UFO-New-Zealand-727961.jpg\">"
+        }
+    }
+    
+    //Part 8
+    let footer = document.querySelector("footer");
+    footer.innerHTML = "Vincent Bennett, 2018"
+	
+	</script>
+</body>
+</html>

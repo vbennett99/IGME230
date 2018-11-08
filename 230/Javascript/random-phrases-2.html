@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Random Phrases</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+            color: black;
+            background-color: #94e3e7;
+        }
+        
+        #wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: aliceblue;
+            background-image: url("garfield.jpg");
+            width: 600px;
+            height: 375px;
+            padding: 10px;
+        }
+        
+        h1{
+            color: orangered;
+            font-size: 50px;   
+            text-shadow: 3px 2px black;
+            text-align: center;
+        }
+        
+        #phrase {
+            padding: 5px;
+            background-color: white;
+            color: orange;
+            font-family: "Comic Sans MS";
+            text-align: center;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 195px;
+        }
+        
+        button {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Garfield Quotes</h1>
+    
+        <!-- Where the random phrase will go -->
+        <p id="phrase"></p>
+        <script>
+            let phrases = ["I eat John, it's what I do!", "Feed me", "Be still my beating heart...", "I hate Mondays", "I love lasagna"];
+            var i = Math.floor(Math.random() * phrases.length);
+            document.querySelector('p').innerHTML = phrases[i];
+        </script>
+        
+        <button id="refresh" onclick="displayQuote();"/>Click for Another Quote!</button>
+        <script>
+            function displayQuote() {
+                let phrases = ["I eat John, it's what I do!", "Feed me", "Be still my beating heart...", "I hate Mondays", "I love lasagna"];
+                var phrase = document.getElementById("phrase");
+                var random = Math.floor((Math.random() *  phrases.length));
+                phrase.innerHTML = phrases[random];
+            }
+        </script>
+     
+        <footer>
+            <p>Vincent Bennett &copy; 2018</p>
+        </footer>
+    </div>
+</body>
+</html>
