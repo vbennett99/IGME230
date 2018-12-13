@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
@@ -11,8 +11,9 @@
             <img id="banner" src="images/botwCBBanner.png" alt="A blue sign reading /'Breath of the Wild Cookbook/'">
             <div id="navigation">
                 <ul id="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="documentation.html">Documentation</a></li>
+                    <li>Home</li>
+                    <li id="center">Sources</li>
+                    <li>Info</li>
                 </ul>
             </div>
         </header>
@@ -20,7 +21,7 @@
         
         <div class="widgets">
             <p>Search a recipe, ingredient, etc:</p>
-	       <input id="searchterm" type="text" size="20" maxlength="20" autofocus value="Ex. 'meat', 'bird egg'" title="For best results, use simple words or short phrases" />
+	       <input id="searchterm" type="text" size="20" maxlength="20" autofocus value="food" />
         </div>
 
         <div class="widgets">
@@ -33,30 +34,18 @@
 		      <option value="25">25</option>
             </select>
         </div>
-        
-        <div class="widgets">
-	       Max Number of Ingredients: 
-            <select id="ingredientLimit">
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5" selected="">5</option>
-            </select>
-        </div>
-        
+
         <div class="widgets">
 	       <button type="button" id="search" class="green">Find your recipe!</button>
         </div>
         
-        <script src="js/allRecipes.js"></script>
-        <script src="js/main.js"></script>
+        <script src="main.js"></script>
 
         <hr>
         
         <h2>Results</h2>
         <div id="content">
-	       <p id="displaytext">Searching...</p>
+	       <p>Searching...</p>
         </div>
 
     </div>

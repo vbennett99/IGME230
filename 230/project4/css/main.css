@@ -1,0 +1,37 @@
+body {
+    background-color: #e0e0e0;
+}
+
+#container {
+	width: 1100px;
+}
+		
+/* MAIN SCREEN WITH BASE IMAGE TO DRAG/DROP ONTO */
+#base {
+	background: #ffffff;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+	width:1000px;
+	height:600px;
+	float:left;
+}
+
+#mothman {
+    width: 360px;
+    height: 600px;
+    float: right;
+}
+
+/* DIFFERENT STYLES FOR TYPES OF IMAGES */	
+.word {
+	position: absolute;
+	cursor: move;
+    background-color: none;
+}
+
+.clothes {
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+}

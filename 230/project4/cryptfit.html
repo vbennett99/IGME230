@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Mothman Dress-Up</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+ 	<script>
+ 	{
+        let selectedElement = null;
+        
+        const TRAY_POSITION = {x:50,y:25};
+        const MAX_WORD_LEFT = 500;
+        const LINE_HEIGHT = 150;
+        const WORD_MARGIN = 0;
+        const WORD_SPACING = 8;
+        const MAX_Z_INDEX = 1000;
+        
+        // ON LOAD
+        window.onload = function()
+        {
+            positionWords();
+            setupDragging();
+        }
+        
+        // SETTING POSITIONS FOR CLOTHES
+        function setPosition(word, wordLeft, wordTop)
+        {
+            word.style.left = wordLeft + "px";
+            word.style.top = wordTop + "px";
+        }
+        
+        // SETTING STARTING POSITION OF WORDS
+        function positionWords()
+        {
+            let doMousedown = function(e)
+            {
+                e.preventDefault();
+                selectedElement = e.target;
+                selectedElement.style.zIndex = MAX_Z_INDEX;
+            };
+            
+            let allWords = document.querySelectorAll(".word");
+            let wordSpacing = WORD_SPACING;
+            let wordLeft = WORD_MARGIN;
+            let wordTop = TRAY_POSITION.y;
+            
+            for(let word of allWords)
+            {
+                setPosition(word, wordLeft, wordTop);
+                let wordWidth = word.clientWidth;
+                wordLeft += wordWidth + wordSpacing;
+                if(wordLeft >= MAX_WORD_LEFT)
+                {
+                    wordLeft = WORD_MARGIN;
+                    wordTop += LINE_HEIGHT;
+                }
+                
+                word.onmousedown = doMousedown;
+            }
+        }
+        
+        // SETUP FOR DRAGGING WORDS
+        function setupDragging()
+        {
+            // 13
+            document.onmousemove = function(e)
+            {
+                e.preventDefault();
+                if(selectedElement)
+                {
+                    let mousePos = getMousePos(document.body, e);
+                    
+                    mousePos.x -= selectedElement.clientWidth/2;
+                    mousePos.y -= selectedElement.clientHeight/2;
+                
+                    console.log(mousePos.x + ", " + mousePos.y);
+                    
+                    setPosition(selectedElement, mousePos.x, mousePos.y);
+                }
+            };
+            
+            document.onmouseup = function(e)
+            {
+                if(selectedElement)
+                {
+                    selectedElement.style.zIndex = MAX_Z_INDEX - 1;
+                }
+                
+                selectedElement = null;
+            };
+        }
+        
+        // GETTING POSITION OF THE MOUSE ON SCREEN
+        function getMousePos(parentElement, event)
+        {
+            let rect = parentElement.getBoundingClientRect();
+            let rJSON = {};
+            rJSON.x = event.clientX - rect.left;
+            rJSON.y = event.clientY - rect.top;
+
+            return rJSON;
+        }
+ 	
+ 	} // END BLOCK
+ 	</script>
+</head>
+<body>
+	<div id="container">
+    	<div id="base"><img id="mothman" src="images/mothman.png" alt="Mothman wearing underwear"></div>
+    </div>
+    <div id="tray"></div>
+   	<div class="word"><img class="clothes" src="images/tops/top1.png" alt="A pink crop top that says 'King'"></div>
+    <div class="word"><img class="clothes" src="images/bottoms/bottom1.png" alt="Blue denim shorts"></div>
+    <div class="word"><img class="clothes" src="images/hats/hat1.png" alt="A wide-brimmed sun hat"></div>
+    <div class="word"><img class="clothes" src="images/accessories/accessory1.png" alt="A gold chain that says 'Queens get the money'"></div>
+    <div class="word"><img class="clothes" src="images/shoes/shoes1.png" alt="Golden boots, usually referred to as Timbs"></div>
+    
+    <p>Note: When trying to drag images, click slightly to the right or left of them.<br>We don't know why it does this but we're working to fix it.</p>
+</body>
+</html>

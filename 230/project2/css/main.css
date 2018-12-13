@@ -24,6 +24,23 @@ h2 {
     text-align: center;
 }
 
+h4 {
+    width: 100%;   
+}
+
+a {
+    color: white;
+    transition: 1s;
+}
+
+a:visited {
+    color: aliceblue;
+}
+
+a:hover {
+    color:  darkblue;
+}
+
 /* ----- ID SELECTORS ----- */
 #banner {
     border-radius: 2px 50px;
@@ -62,18 +79,48 @@ h2 {
 	border-radius: 15px;
 }
 
+#wrap {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+
 /* ----- CLASS SELECTORS ----- */
 
-.widgets{
-            border-style: solid;
-		    border-width : 1px;
-            border-radius: 15px;
-            padding: 0.5% 0%;
+.widgets {
+    border-style: solid;
+    border-width : 1px;
+    border-radius: 15px;
+    padding: 0.5% 0%;
     
-            text-align: center;
+    text-align: center;
     
-			margin-top: 1em;
-			margin-bottom:1em;
-            margin-left: 25%;    
-            margin-right: 25%;
-		}
+    margin-top: 1em;
+    margin-bottom:1em;
+    margin-left: 25%;    
+    margin-right: 25%;
+    }
+
+.result {   
+    width: 94%;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    align-content: center;
+    margin: 3%;
+    display: block;
+}
+
+.result ul li {  
+    list-style: lower-roman;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown {
+    color: yellow;
+}
